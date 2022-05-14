@@ -1,3 +1,2 @@
 *.o
-minifmt
-test.c
+pstyle
