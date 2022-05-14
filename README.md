@@ -1,36 +1,36 @@
-# mini-fmt
+# pstyle
 
 simple c library for formatting print statements
 
 ```cmd
-git submodule add git@github.com:abschill/mini-fmt.git minifmt
+git submodule add git@github.com:abschill/pstyle.git pstyle
 ```
 
 ```c
-#include "minifmt/minifmt.h"
+#include "pstyle/pystyle.h"
 
 int main() {
-    fmts(*yellow, "Hello World\n");
+    pstyles(*yellow, "Hello World\n");
 }
 
 ```
 
 ## Functions
 
-`fmts(color, msg)`
+`pstyles(color, msg)`
 
-prints x-formatted `char*` msg in the specified style/color
+prints styled `char*` msg in the specified style/color
 
-`fmtsln(color,msg)`
+`pstylesln(color,msg)`
 
-prints x-formatted `char*` msg in the specified style/color + line breaks
+prints styled `char*` msg in the specified style/color + line breaks
 
-`fmtn(color, code)`
+`pstylen(color, code)`
 
-prints x-formatted `int` msg in the specified style/color
+prints styled `int` msg in the specified style/color
 
-`fmtnln(color, code)`
-prints x-formatted `int` msg in the specified style/color + line breaks
+`pstylenln(color, code)`
+prints styled `int` msg in the specified style/color + line breaks
 
 ## Colors Available
 

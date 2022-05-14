@@ -1,2 +1,2 @@
 all:
-	gcc minifmt.c -o minifmt
+	gcc pstyle.c -o pstyle
