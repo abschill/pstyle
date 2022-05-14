@@ -10,16 +10,27 @@ git submodule add git@github.com:abschill/mini-fmt.git minifmt
 #include "minifmt/minifmt.h"
 
 int main() {
-    prints(*yellow, "Hello World\n");
+    fmts(*yellow, "Hello World\n");
 }
 
 ```
 
 ## Functions
 
-`prints(color, msg)`
+`fmts(color, msg)`
 
-prints `char*` msg in the specified color
+prints x-formatted `char*` msg in the specified style/color
+
+`fmtsln(color,msg)`
+
+prints x-formatted `char*` msg in the specified style/color + line breaks
+
+`fmtn(color, code)`
+
+prints x-formatted `int` msg in the specified style/color
+
+`fmtnln(color, code)`
+prints x-formatted `int` msg in the specified style/color + line breaks
 
 ## Colors Available
 

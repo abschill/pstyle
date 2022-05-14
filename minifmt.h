@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define str(r) r
 
 typedef void (*fmt)(char*);
 
@@ -30,7 +33,32 @@ void cyan(char* m) {
     printf("\033[0;36m%s", m);
 }
 
-void prints(fmt set_format, char* msg) {
+void fmts(fmt set_format, char* msg) {
     (*set_format)(msg);
     reset();
+}
+
+void fmtsln(fmt set_format, char* msg) {
+    (*set_format)(msg);
+    reset();
+    printf("\n");
+}
+
+void fmtn(fmt set_format, int code) {
+    char *astr;
+    astr = malloc(sizeof(code));
+    sprintf(astr, "%d", str(code));
+    (*set_format)(astr);
+    reset();
+    free(astr);
+}
+
+void fmtnln(fmt set_format, int code) {
+    char *astr;
+    astr = malloc(sizeof(code));
+    sprintf(astr, "%d", str(code));
+    (*set_format)(astr);
+    reset();
+    printf("\n");
+    free(astr);
 }
