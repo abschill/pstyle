@@ -3,7 +3,7 @@
 simple c library for formatting print statements
 
 ```cmd
-git clone git@github.com:abschill/mini-fmt.git
+git submodule add git@github.com:abschill/mini-fmt.git minifmt
 ```
 
 ```c
