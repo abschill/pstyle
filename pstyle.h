@@ -45,8 +45,7 @@ void fmtsln(fmt set_format, char* msg) {
 }
 
 void fmtn(fmt set_format, int code) {
-    char *astr;
-    astr = malloc(sizeof(code));
+    char *astr = (char*)malloc(sizeof(code));
     sprintf(astr, "%d", str(code));
     (*set_format)(astr);
     reset();
