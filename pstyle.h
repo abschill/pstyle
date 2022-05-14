@@ -1,3 +1,4 @@
+#pragma once
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -39,8 +40,7 @@ void fmts(fmt set_format, char* msg) {
 }
 
 void fmtsln(fmt set_format, char* msg) {
-    (*set_format)(msg);
-    reset();
+    fmts(set_format, msg);
     printf("\n");
 }
 
@@ -54,11 +54,6 @@ void fmtn(fmt set_format, int code) {
 }
 
 void fmtnln(fmt set_format, int code) {
-    char *astr;
-    astr = malloc(sizeof(code));
-    sprintf(astr, "%d", str(code));
-    (*set_format)(astr);
-    reset();
+    fmtn(set_format, code);
     printf("\n");
-    free(astr);
 }
