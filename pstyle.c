@@ -2,8 +2,8 @@
 
 // example integration
 int main() {
-    fmts(*yellow, "Hello\n");
-    fmtnln(*yellow, 1);
-    fmtnln(*red, 2346);
-    fmtsln(*green, "Success");
+    printf("%s%s", red.text, "Red Text\n");
+    printf("%s%s", cyan.bold, "Bold Cyan\n");
+    printf("%s%s", green.text, "Green\n");
+    printf("%s%s", green.hi, "Hi Green\n");
 }

@@ -10,27 +10,10 @@ git submodule add git@github.com:abschill/pstyle.git pstyle
 #include "pstyle/pystyle.h"
 
 int main() {
-    fmtsln(*yellow, "Hello World");
+    printf("%s%s", red.text, "Hello in Red")
 }
 
 ```
-
-## Functions
-
-`fmts(color, msg)`
-
-prints styled `char*` msg in the specified style/color
-
-`fmtsln(color,msg)`
-
-prints styled `char*` msg in the specified style/color + line breaks
-
-`fmtn(color, code)`
-
-prints styled `int` msg in the specified style/color
-
-`fmtnln(color, code)`
-prints styled `int` msg in the specified style/color + line breaks
 
 ## Colors Available
 
@@ -40,3 +23,13 @@ prints styled `int` msg in the specified style/color + line breaks
 - blue
 - purple
 - cyan
+- black
+
+## Color Constants
+
+- text - apply color to text
+- bg - apply color to bg
+- bold - bolden the text with the given color
+- underline - underline the text with the given color
+- hi - text with high intensity
+- bhi - bold text with high intensity

@@ -2,57 +2,125 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "colors.h"
 #define str(r) r
 
-typedef void (*fmt)(char*);
+struct Color {
+    char text[8];
+    char bold[8];
+    char underline[8];
+    char bg[8];
+    char hi[8];
+    char bhi[8];
+};
 
-void reset() {
-    printf("\033[0;37m");
-}
+typedef struct Color color;
 
-void red(char* m) {
-    printf("\033[0;31m%s", m);
-}
+/**
+ * @brief blacks
+ *
+ */
+color black = {
+    .text = BLK,
+    .underline = UBLK,
+    .bg = BLKB,
+    .hi = HBLK,
+    .bhi = BLKHB
+};
+/**
+ * @brief reds
+ *
+ * @param m string to colorize
+ */
+color red = {
+    .text = RED,
+    .underline = URED,
+    .bg = REDB,
+    .bold = BRED,
+    .hi = HRED,
+    .bhi = REDHB
+};
 
-void green(char* m) {
-    printf("\033[0;32m%s", m);
-}
 
-void yellow(char* m) {
-    printf("\033[0;33m%s", m);
-}
+/**
+ * @brief greens
+ *
+ * @param m msg to colorize
+ */
+color green = {
+    .text = GRN,
+    .underline = UGRN,
+    .bg = GRNB,
+    .bold = BGRN,
+    .hi = HGRN,
+    .bhi = GRNHB
+};
 
-void blue(char* m) {
-    printf("\033[0;34m%s", m);
-}
+/**
+ * @brief yellows
+ *
+ * @param m the string to colorize
+ */
+color yellow = {
+    .text = YEL,
+    .underline = UYEL,
+    .bold = BYEL,
+    .bg = YELB,
+    .hi = HYEL,
+    .bhi = BHYEL
+};
 
-void purple(char* m) {
-    printf("\033[0;35m%s", m);
-}
+/**
+ * @brief blues
+ *
+ * @param m string to colorize
+ */
+color blue = {
+    .text = BLU,
+    .underline = UBLU,
+    .bold = BBLU,
+    .bg = BLUB,
+    .hi = HBLU,
+    .bhi = BHBLU
+};
 
-void cyan(char* m) {
-    printf("\033[0;36m%s", m);
-}
+/**
+ * @brief purples
+ *
+ * @param m string to colorize
+ */
+color purple = {
+    .text = MAG,
+    .underline = UMAG,
+    .bg = MAGB,
+    .bold = BMAG,
+    .hi = HMAG,
+    .bhi = BHMAG
+};
 
-void fmts(fmt set_format, char* msg) {
-    (*set_format)(msg);
-    reset();
-}
-
-void fmtsln(fmt set_format, char* msg) {
-    fmts(set_format, msg);
-    printf("\n");
-}
-
-void fmtn(fmt set_format, int code) {
-    char *astr = (char*)malloc(sizeof(code));
-    sprintf(astr, "%d", str(code));
-    (*set_format)(astr);
-    reset();
-    free(astr);
-}
-
-void fmtnln(fmt set_format, int code) {
-    fmtn(set_format, code);
-    printf("\n");
-}
+/**
+ * @brief cyan
+ *
+ * @param m string to colorize
+ */
+color cyan = {
+    .text = CYN,
+    .bg = CYNB,
+    .underline = UCYN,
+    .bold = BCYN,
+    .hi = HCYN,
+    .bhi = BHCYN
+};
+/**
+ * @brief whites
+ *
+ * @param m string to colorize
+ */
+color white = {
+    .text = WHT,
+    .bg = WHTB,
+    .underline = UWHT,
+    .bold = BWHT,
+    .hi = HWHT,
+    .bhi = BHWHT
+};
