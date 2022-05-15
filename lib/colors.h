@@ -1,3 +1,8 @@
+#pragma once
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 //Regular text
 #define BLK "\e[0;30m"
 #define RED "\e[0;31m"
@@ -71,3 +76,86 @@
 
 //Reset
 #define COLOR_RESET "\e[0m"
+
+struct Color {
+    char text[8];
+    char bold[8];
+    char underline[8];
+    char bg[8];
+    char hi[8];
+    char bhi[9];
+};
+
+typedef struct Color color;
+
+color black = {
+    .text = BLK,
+    .bold = BBLK,
+    .underline = UBLK,
+    .bg = BLKB,
+    .hi = HBLK,
+    .bhi = BLKHB
+};
+
+color red = {
+    .text = RED,
+    .bold = BRED,
+    .underline = URED,
+    .bg = REDB,
+    .hi = HRED,
+    .bhi = REDHB
+};
+
+color green = {
+    .text = GRN,
+    .bold = BGRN,
+    .underline = UGRN,
+    .bg = GRNB,
+    .hi = HGRN,
+    .bhi = GRNHB
+};
+
+color yellow = {
+    .text = YEL,
+    .bold = BYEL,
+    .underline = UYEL,
+    .bg = YELB,
+    .hi = HYEL,
+    .bhi = BHYEL
+};
+
+color blue = {
+    .text = BLU,
+    .bold = BBLU,
+    .underline = UBLU,
+    .bg = BLUB,
+    .hi = HBLU,
+    .bhi = BHBLU
+};
+
+color purple = {
+    .text = MAG,
+    .bold = BMAG,
+    .underline = UMAG,
+    .bg = MAGB,
+    .hi = HMAG,
+    .bhi = BHMAG
+};
+
+color cyan = {
+    .text = CYN,
+    .bold = BCYN,
+    .underline = UCYN,
+    .bg = CYNB,
+    .hi = HCYN,
+    .bhi = BHCYN
+};
+
+color white = {
+    .text = WHT,
+    .bold = BWHT,
+    .underline = UWHT,
+    .bg = WHTB,
+    .hi = HWHT,
+    .bhi = BHWHT
+};
