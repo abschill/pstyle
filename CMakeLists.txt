@@ -5,3 +5,5 @@ cmake_minimum_required(VERSION 2.6.0)
 project(pstyle C)
 
 add_executable(pstyle pstyle.c)
+target_include_directories(pstyle PUBLIC
+                            "${PROJECT_BINARY_DIR}")
