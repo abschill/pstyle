@@ -16,10 +16,6 @@ struct Color {
 
 typedef struct Color color;
 
-/**
- * @brief blacks
- *
- */
 color black = {
     .text = BLK,
     .underline = UBLK,
@@ -27,11 +23,7 @@ color black = {
     .hi = HBLK,
     .bhi = BLKHB
 };
-/**
- * @brief reds
- *
- * @param m string to colorize
- */
+
 color red = {
     .text = RED,
     .underline = URED,
@@ -41,12 +33,6 @@ color red = {
     .bhi = REDHB
 };
 
-
-/**
- * @brief greens
- *
- * @param m msg to colorize
- */
 color green = {
     .text = GRN,
     .underline = UGRN,
@@ -56,11 +42,6 @@ color green = {
     .bhi = GRNHB
 };
 
-/**
- * @brief yellows
- *
- * @param m the string to colorize
- */
 color yellow = {
     .text = YEL,
     .underline = UYEL,
@@ -70,11 +51,6 @@ color yellow = {
     .bhi = BHYEL
 };
 
-/**
- * @brief blues
- *
- * @param m string to colorize
- */
 color blue = {
     .text = BLU,
     .underline = UBLU,
@@ -84,11 +60,6 @@ color blue = {
     .bhi = BHBLU
 };
 
-/**
- * @brief purples
- *
- * @param m string to colorize
- */
 color purple = {
     .text = MAG,
     .underline = UMAG,
@@ -98,11 +69,6 @@ color purple = {
     .bhi = BHMAG
 };
 
-/**
- * @brief cyan
- *
- * @param m string to colorize
- */
 color cyan = {
     .text = CYN,
     .bg = CYNB,
@@ -111,11 +77,7 @@ color cyan = {
     .hi = HCYN,
     .bhi = BHCYN
 };
-/**
- * @brief whites
- *
- * @param m string to colorize
- */
+
 color white = {
     .text = WHT,
     .bg = WHTB,
