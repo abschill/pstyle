@@ -1,3 +1,10 @@
 *.o
 pstyle
 .vscode
+
+CMakeFiles
+cmake_install.cmake
+CMakeCache.*
+
+Makefile
+makefile
