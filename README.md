@@ -7,7 +7,7 @@ git submodule add git@github.com:abschill/pstyle.git pstyle
 ```
 
 ```c
-#include "pstyle/pystyle.h"
+#include "pstyle/color.h"
 
 int main() {
     printf("%s%s", red.text, "Hello in Red")
