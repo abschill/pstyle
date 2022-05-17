@@ -17,19 +17,23 @@ int main() {
 
 ## Colors Available
 
-- red
-- green
-- yellow
-- blue
-- purple
-- cyan
-- black
+- `red`
+- `green`
+- `yellow`
+- `blue`
+- `purple`
+- `cyan`
+- `black`
 
 ## Color Constants
 
-- text - apply color to text
-- bg - apply color to bg
-- bold - bolden the text with the given color
-- underline - underline the text with the given color
-- hi - text with high intensity
-- bhi - bold text with high intensity
+- `<color>.text` - apply color to text
+- `<color>.bg` - apply color to bg
+- `<color>.bold` - bolden the text with the given color
+- `<color>.underline` - underline the text with the given color
+- `<color>.hi` - text with high intensity
+- `<color>.bhi` - bold text with high intensity
+
+## Helper Macros
+
+- `COLOR_RESET` - resets the terminal styles inline
